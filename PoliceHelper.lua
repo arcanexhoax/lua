@@ -168,7 +168,7 @@ function main()
 	
 	autoupdate("https://raw.githubusercontent.com/arcanexhoax/lua/master/PoliceHelper.json")
 
-	sampAddChatMessage(col .. "PoliceHelper {ffffff}запущен. Меню: " .. col .. "/pmenu{ffffff}. Автор " .. col .. "_jumbo_{ffffff}.", phcolor)
+	sampAddChatMessage(col .. "PoliceHelperNew {ffffff}Г§Г ГЇГіГ№ГҐГ­. ГЊГҐГ­Гѕ: " .. col .. "/pmenu{ffffff}. ГЂГўГІГ®Г° " .. col .. "_jumbo_{ffffff}.", phcolor)
 
 	thread1 = lua_thread.create_suspended(thread)
 	
@@ -329,28 +329,28 @@ function imgui.OnDrawFrame()
     imgui.SetNextWindowSize(imgui.ImVec2(760, 520), imgui.Cond.FirstUseEver)
 	imgui.PushStyleColor(imgui.Col.ChildWindowBg, imgui.ImVec4(0, 0, 0, a - 0.4))
 	imgui.Begin("\tPoliceHelper", mainWindowState, imgui.WindowFlags.NoResize + imgui.WindowFlags.NoCollapse)
-		if imgui.Button(u8'Команды', imgui.ImVec2(100,30)) then
+		if imgui.Button(u8'ГЉГ®Г¬Г Г­Г¤Г»', imgui.ImVec2(100,30)) then
 			commands = true
 			binds = false
 			other = false
 			config = false
 		end
 		imgui.SameLine()
-		if imgui.Button(u8'Другое', imgui.ImVec2(100,30)) then
+		if imgui.Button(u8'Г„Г°ГіГЈГ®ГҐ', imgui.ImVec2(100,30)) then
 			commands = false
 			binds = false
 			other = true
 			config = false
 		end
 		imgui.SameLine()
-		if imgui.Button(u8'Бинды', imgui.ImVec2(100,30)) then
+		if imgui.Button(u8'ГЃГЁГ­Г¤Г»', imgui.ImVec2(100,30)) then
 			commands = false
 			binds = true
 			other = false
 			config = false
 		end
 		imgui.SameLine()
-		if imgui.Button(u8'Настройки', imgui.ImVec2(100,30)) then
+		if imgui.Button(u8'ГЌГ Г±ГІГ°Г®Г©ГЄГЁ', imgui.ImVec2(100,30)) then
 			commands = false
 			binds = false
 			other = false
@@ -364,7 +364,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Спросить документы у ближайшего игрока")
+				imgui.Text(u8" -   Г‘ГЇГ°Г®Г±ГЁГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Гі ГЎГ«ГЁГ¦Г Г©ГёГҐГЈГ® ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/pt") then
@@ -372,7 +372,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Спросить документы на т/с")
+				imgui.Text(u8" -   Г‘ГЇГ°Г®Г±ГЁГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Г­Г  ГІ/Г±")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/gv") then
@@ -380,7 +380,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Попросить ближайшего игрока покинуть т/с")
+				imgui.Text(u8" -   ГЏГ®ГЇГ°Г®Г±ГЁГІГј ГЎГ«ГЁГ¦Г Г©ГёГҐГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЄГЁГ­ГіГІГј ГІ/Г±")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/st") then
@@ -388,7 +388,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Попросить ближайшего игрока остановить т/с")
+				imgui.Text(u8" -   ГЏГ®ГЇГ°Г®Г±ГЁГІГј ГЎГ«ГЁГ¦Г Г©ГёГҐГЈГ® ГЁГЈГ°Г®ГЄГ  Г®Г±ГІГ Г­Г®ГўГЁГІГј ГІ/Г±")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/by") then
@@ -396,7 +396,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Попрощаться с игроком")
+				imgui.Text(u8" -   ГЏГ®ГЇГ°Г®Г№Г ГІГјГ±Гї Г± ГЁГЈГ°Г®ГЄГ®Г¬")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/fr") then
@@ -404,7 +404,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Обыскать ближайшего игрока")
+				imgui.Text(u8" -   ГЋГЎГ»Г±ГЄГ ГІГј ГЎГ«ГЁГ¦Г Г©ГёГҐГЈГ® ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/cu") then
@@ -412,7 +412,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Надеть наручники на ближайшего игрока")
+				imgui.Text(u8" -   ГЌГ Г¤ГҐГІГј Г­Г Г°ГіГ·Г­ГЁГЄГЁ Г­Г  ГЎГ«ГЁГ¦Г Г©ГёГҐГЈГ® ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/un") then
@@ -420,7 +420,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Снять наручники с ближайшего игрока")
+				imgui.Text(u8" -   Г‘Г­ГїГІГј Г­Г Г°ГіГ·Г­ГЁГЄГЁ Г± ГЎГ«ГЁГ¦Г Г©ГёГҐГЈГ® ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/zp") then
@@ -428,7 +428,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Начать преследование ближайшего игрока")
+				imgui.Text(u8" -   ГЌГ Г·Г ГІГј ГЇГ°ГҐГ±Г«ГҐГ¤Г®ГўГ Г­ГЁГҐ ГЎГ«ГЁГ¦Г Г©ГёГҐГЈГ® ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/auz") then
@@ -436,7 +436,7 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Начать преследование всех игроков из /wanted в радиусе 25м")
+				imgui.Text(u8" -   ГЌГ Г·Г ГІГј ГЇГ°ГҐГ±Г«ГҐГ¤Г®ГўГ Г­ГЁГҐ ГўГ±ГҐГµ ГЁГЈГ°Г®ГЄГ®Гў ГЁГ§ /wanted Гў Г°Г Г¤ГЁГіГ±ГҐ 25Г¬")
 				imgui.Spacing()
 
 				if imgui.Button(u8"/aud") then
@@ -444,155 +444,155 @@ function imgui.OnDrawFrame()
 				end
 
 				imgui.SameLine()
-				imgui.Text(u8" -   Начать конвоирование всех игроков из /wanted, которые сдались в радиусе 25м")
+				imgui.Text(u8" -   ГЌГ Г·Г ГІГј ГЄГ®Г­ГўГ®ГЁГ°Г®ГўГ Г­ГЁГҐ ГўГ±ГҐГµ ГЁГЈГ°Г®ГЄГ®Гў ГЁГ§ /wanted, ГЄГ®ГІГ®Г°Г»ГҐ Г±Г¤Г Г«ГЁГ±Гј Гў Г°Г Г¤ГЁГіГ±ГҐ 25Г¬")
 				imgui.Spacing()
 
 				imgui.Button(u8"/afind")
 				imgui.SameLine()
-				imgui.Text(u8" -   Автоматический поиск игрока. Активация: /afind [ID]. Деактивация: /afind off")
+				imgui.Text(u8" -   ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁГ© ГЇГ®ГЁГ±ГЄ ГЁГЈГ°Г®ГЄГ . ГЂГЄГІГЁГўГ Г¶ГЁГї: /afind [ID]. Г„ГҐГ ГЄГІГЁГўГ Г¶ГЁГї: /afind off")
 			elseif other then
-				imgui.Button(u8"ПКМ + 1")
+				imgui.Button(u8"ГЏГЉГЊ + 1")
 				imgui.SameLine()
-				imgui.Text(u8" -   Спросить документы у игрока")
+				imgui.Text(u8" -   Г‘ГЇГ°Г®Г±ГЁГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Гі ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
-				imgui.Button(u8"ПКМ + 2")
+				imgui.Button(u8"ГЏГЉГЊ + 2")
 				imgui.SameLine()
-				imgui.Text(u8" -   Спросить документы на т/с")
+				imgui.Text(u8" -   Г‘ГЇГ°Г®Г±ГЁГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Г­Г  ГІ/Г±")
 				imgui.Spacing()
-				imgui.Button(u8"ПКМ + 3")
+				imgui.Button(u8"ГЏГЉГЊ + 3")
 				imgui.SameLine()
-				imgui.Text(u8" -   Попрощаться с игроком")
+				imgui.Text(u8" -   ГЏГ®ГЇГ°Г®Г№Г ГІГјГ±Гї Г± ГЁГЈГ°Г®ГЄГ®Г¬")
 				imgui.Spacing()
-				imgui.Button(u8"ПКМ + 4")
+				imgui.Button(u8"ГЏГЉГЊ + 4")
 				imgui.SameLine()
-				imgui.Text(u8" -   Обыскать игрока")
+				imgui.Text(u8" -   ГЋГЎГ»Г±ГЄГ ГІГј ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
-				imgui.Button(u8"ПКМ + 5")
+				imgui.Button(u8"ГЏГЉГЊ + 5")
 				imgui.SameLine()
-				imgui.Text(u8" -   Надеть наручники на игрока")
+				imgui.Text(u8" -   ГЌГ Г¤ГҐГІГј Г­Г Г°ГіГ·Г­ГЁГЄГЁ Г­Г  ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
-				imgui.Button(u8"ПКМ + 6")
+				imgui.Button(u8"ГЏГЉГЊ + 6")
 				imgui.SameLine()
-				imgui.Text(u8" -   Снять наручники с игрока")
+				imgui.Text(u8" -   Г‘Г­ГїГІГј Г­Г Г°ГіГ·Г­ГЁГЄГЁ Г± ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
-				imgui.Button(u8"ПКМ + 7")
+				imgui.Button(u8"ГЏГЉГЊ + 7")
 				imgui.SameLine()
-				imgui.Text(u8" -   Начать преследование игрока")
+				imgui.Text(u8" -   ГЌГ Г·Г ГІГј ГЇГ°ГҐГ±Г«ГҐГ¤Г®ГўГ Г­ГЁГҐ ГЁГЈГ°Г®ГЄГ ")
 				imgui.Spacing()
 			elseif binds then
-				if imgui.CollapsingHeader(u8'Информация') then
+				if imgui.CollapsingHeader(u8'Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї') then
 					imgui.Spacing()
 					imgui.Spacing()
-					imgui.Text(u8"Для обращения к игроку по нику или ID используйте {nick} или {id} в любых текстовых полях ниже.")
-					imgui.Spacing()
-					imgui.Spacing()
-				end
-				if imgui.CollapsingHeader(u8'Сообщения при проверке документов') then
-					imgui.Spacing()
-					imgui.Spacing()
-					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Основной текст ", askDoc[1])
-					imgui.PopItemWidth()
-					imgui.Spacing()
-					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Дополнительный текст ", askDoc[2])
-					imgui.PopItemWidth()
+					imgui.Text(u8"Г„Г«Гї Г®ГЎГ°Г Г№ГҐГ­ГЁГї ГЄ ГЁГЈГ°Г®ГЄГі ГЇГ® Г­ГЁГЄГі ГЁГ«ГЁ ID ГЁГ±ГЇГ®Г«ГјГ§ГіГ©ГІГҐ {nick} ГЁГ«ГЁ {id} Гў Г«ГѕГЎГ»Гµ ГІГҐГЄГ±ГІГ®ГўГ»Гµ ГЇГ®Г«ГїГµ Г­ГЁГ¦ГҐ.")
 					imgui.Spacing()
 					imgui.Spacing()
 				end
-				if imgui.CollapsingHeader(u8'Сообщения при проверке документов на транспорт') then
+				if imgui.CollapsingHeader(u8'Г‘Г®Г®ГЎГ№ГҐГ­ГЁГї ГЇГ°ГЁ ГЇГ°Г®ГўГҐГ°ГЄГҐ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ®Гў') then
 					imgui.Spacing()
 					imgui.Spacing()
 					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Основной текст  ", askCarDoc[1])
+					imgui.InputText(u8"ГЋГ±Г­Г®ГўГ­Г®Г© ГІГҐГЄГ±ГІ ", askDoc[1])
 					imgui.PopItemWidth()
 					imgui.Spacing()
 					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Дополнительный текст  ", askCarDoc[2])
+					imgui.InputText(u8"Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»Г© ГІГҐГЄГ±ГІ ", askDoc[2])
 					imgui.PopItemWidth()
 					imgui.Spacing()
 					imgui.Spacing()
 				end
-				if imgui.CollapsingHeader(u8'Сообщения с просьбой покинуть транспорт') then
+				if imgui.CollapsingHeader(u8'Г‘Г®Г®ГЎГ№ГҐГ­ГЁГї ГЇГ°ГЁ ГЇГ°Г®ГўГҐГ°ГЄГҐ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ®Гў Г­Г  ГІГ°Г Г­Г±ГЇГ®Г°ГІ') then
 					imgui.Spacing()
 					imgui.Spacing()
 					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Основной текст   ", getOutOfVeh[1])
+					imgui.InputText(u8"ГЋГ±Г­Г®ГўГ­Г®Г© ГІГҐГЄГ±ГІ  ", askCarDoc[1])
 					imgui.PopItemWidth()
 					imgui.Spacing()
 					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Дополнительный текст   ", getOutOfVeh[2])
-					imgui.PopItemWidth()
-					imgui.Spacing()
-					imgui.Spacing()
-				end
-				if imgui.CollapsingHeader(u8'Сообщения с просьбой остановить транспорт') then
-					imgui.Spacing()
-					imgui.Spacing()
-					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Основной текст    ", stopVeh[1])
-					imgui.PopItemWidth()
-					imgui.Spacing()
-					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Дополнительный текст    ", stopVeh[2])
+					imgui.InputText(u8"Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»Г© ГІГҐГЄГ±ГІ  ", askCarDoc[2])
 					imgui.PopItemWidth()
 					imgui.Spacing()
 					imgui.Spacing()
 				end
-				if imgui.CollapsingHeader(u8'Сообщения с прощанием с игроком') then
+				if imgui.CollapsingHeader(u8'Г‘Г®Г®ГЎГ№ГҐГ­ГЁГї Г± ГЇГ°Г®Г±ГјГЎГ®Г© ГЇГ®ГЄГЁГ­ГіГІГј ГІГ°Г Г­Г±ГЇГ®Г°ГІ') then
 					imgui.Spacing()
 					imgui.Spacing()
 					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Основной текст      ", bye[1])
+					imgui.InputText(u8"ГЋГ±Г­Г®ГўГ­Г®Г© ГІГҐГЄГ±ГІ   ", getOutOfVeh[1])
 					imgui.PopItemWidth()
 					imgui.Spacing()
 					imgui.PushItemWidth(len)
-					imgui.InputText(u8"Дополнительный текст      ", bye[2])
+					imgui.InputText(u8"Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»Г© ГІГҐГЄГ±ГІ   ", getOutOfVeh[2])
+					imgui.PopItemWidth()
+					imgui.Spacing()
+					imgui.Spacing()
+				end
+				if imgui.CollapsingHeader(u8'Г‘Г®Г®ГЎГ№ГҐГ­ГЁГї Г± ГЇГ°Г®Г±ГјГЎГ®Г© Г®Г±ГІГ Г­Г®ГўГЁГІГј ГІГ°Г Г­Г±ГЇГ®Г°ГІ') then
+					imgui.Spacing()
+					imgui.Spacing()
+					imgui.PushItemWidth(len)
+					imgui.InputText(u8"ГЋГ±Г­Г®ГўГ­Г®Г© ГІГҐГЄГ±ГІ    ", stopVeh[1])
+					imgui.PopItemWidth()
+					imgui.Spacing()
+					imgui.PushItemWidth(len)
+					imgui.InputText(u8"Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»Г© ГІГҐГЄГ±ГІ    ", stopVeh[2])
+					imgui.PopItemWidth()
+					imgui.Spacing()
+					imgui.Spacing()
+				end
+				if imgui.CollapsingHeader(u8'Г‘Г®Г®ГЎГ№ГҐГ­ГЁГї Г± ГЇГ°Г®Г№Г Г­ГЁГҐГ¬ Г± ГЁГЈГ°Г®ГЄГ®Г¬') then
+					imgui.Spacing()
+					imgui.Spacing()
+					imgui.PushItemWidth(len)
+					imgui.InputText(u8"ГЋГ±Г­Г®ГўГ­Г®Г© ГІГҐГЄГ±ГІ      ", bye[1])
+					imgui.PopItemWidth()
+					imgui.Spacing()
+					imgui.PushItemWidth(len)
+					imgui.InputText(u8"Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»Г© ГІГҐГЄГ±ГІ      ", bye[2])
 					imgui.PopItemWidth()
 					imgui.Spacing()
 					imgui.Spacing()
 				end
 			elseif config then
-				imgui.Checkbox(u8"\tПоказывать /ens при проверке документов", showPts)
+				imgui.Checkbox(u8"\tГЏГ®ГЄГ Г§Г»ГўГ ГІГј /ens ГЇГ°ГЁ ГЇГ°Г®ГўГҐГ°ГЄГҐ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ®Гў", showPts)
 				imgui.Spacing()
-				imgui.Checkbox(u8"\tАвтоматически обыскивать игрока при проверке документов", friskPlayer)
+				imgui.Checkbox(u8"\tГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁ Г®ГЎГ»Г±ГЄГЁГўГ ГІГј ГЁГЈГ°Г®ГЄГ  ГЇГ°ГЁ ГЇГ°Г®ГўГҐГ°ГЄГҐ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ®Гў", friskPlayer)
 				imgui.Spacing()
-				imgui.Checkbox(u8"\tАвтоматически обыскивать транспорт при просьбе покинуть транспорт", friskCar)
+				imgui.Checkbox(u8"\tГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁ Г®ГЎГ»Г±ГЄГЁГўГ ГІГј ГІГ°Г Г­Г±ГЇГ®Г°ГІ ГЇГ°ГЁ ГЇГ°Г®Г±ГјГЎГҐ ГЇГ®ГЄГЁГ­ГіГІГј ГІГ°Г Г­Г±ГЇГ®Г°ГІ", friskCar)
 				imgui.Spacing()
-				imgui.Checkbox(u8"\tАвтоматически надевать наручники после выстрела из тайзера. Не работает вместе с ChatID.sf", cuffAfterTaser)
+				imgui.Checkbox(u8"\tГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁ Г­Г Г¤ГҐГўГ ГІГј Г­Г Г°ГіГ·Г­ГЁГЄГЁ ГЇГ®Г±Г«ГҐ ГўГ»Г±ГІГ°ГҐГ«Г  ГЁГ§ ГІГ Г©Г§ГҐГ°Г . ГЌГҐ Г°Г ГЎГ®ГІГ ГҐГІ ГўГ¬ГҐГ±ГІГҐ Г± ChatID.sf", cuffAfterTaser)
 				imgui.Spacing()
-				imgui.Checkbox(u8"\tАвтоматически доставать оружие после получение в оружейной", takeGuns)
+				imgui.Checkbox(u8"\tГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁ Г¤Г®Г±ГІГ ГўГ ГІГј Г®Г°ГіГ¦ГЁГҐ ГЇГ®Г±Г«ГҐ ГЇГ®Г«ГіГ·ГҐГ­ГЁГҐ Гў Г®Г°ГіГ¦ГҐГ©Г­Г®Г©", takeGuns)
 				imgui.Spacing()
-				imgui.Checkbox(u8"\tАвтоматически преследовать игрока после выдачи розыска", chaseAfterSu)
-				imgui.Spacing()
-				imgui.Spacing()
-				imgui.Separator()
-				imgui.Spacing()
-				imgui.Spacing()
-				imgui.Checkbox(u8"\tНе спрашивать документы в воскресенье", dontAskWhenSunday)
-				imgui.Spacing()
-				imgui.Checkbox(u8"\tНе спрашивать документы не на смене или на анонимной смене FBI", dontAskWithoutDuty)
-				imgui.Spacing()
-				imgui.Checkbox(u8"\tНе обыскивать не на смене или на анонимной смене FBI", dontFriskWithoutDuty)
-				imgui.Spacing()
-				imgui.Checkbox(u8"\tНе спрашивать документы у новичков 1-2 lvl", askNovices)
-				imgui.Spacing()
-				imgui.Checkbox(u8"\tНе спрашивать документы у ОПГ", askGang)
-				imgui.Spacing()
-				imgui.Checkbox(u8"\tНе спрашивать документы у ПО", askPolice)
-				imgui.Spacing()
-				imgui.Checkbox(u8"\tНе спрашивать документы у игроков из списка", askPlayers)
+				imgui.Checkbox(u8"\tГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁ ГЇГ°ГҐГ±Г«ГҐГ¤Г®ГўГ ГІГј ГЁГЈГ°Г®ГЄГ  ГЇГ®Г±Г«ГҐ ГўГ»Г¤Г Г·ГЁ Г°Г®Г§Г»Г±ГЄГ ", chaseAfterSu)
 				imgui.Spacing()
 				imgui.Spacing()
 				imgui.Separator()
 				imgui.Spacing()
-				imgui.Text(u8"Игроки, которые не будут проверяться:")
+				imgui.Spacing()
+				imgui.Checkbox(u8"\tГЌГҐ Г±ГЇГ°Г ГёГЁГўГ ГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Гў ГўГ®Г±ГЄГ°ГҐГ±ГҐГ­ГјГҐ", dontAskWhenSunday)
+				imgui.Spacing()
+				imgui.Checkbox(u8"\tГЌГҐ Г±ГЇГ°Г ГёГЁГўГ ГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ ГЁГ«ГЁ Г­Г  Г Г­Г®Г­ГЁГ¬Г­Г®Г© Г±Г¬ГҐГ­ГҐ FBI", dontAskWithoutDuty)
+				imgui.Spacing()
+				imgui.Checkbox(u8"\tГЌГҐ Г®ГЎГ»Г±ГЄГЁГўГ ГІГј Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ ГЁГ«ГЁ Г­Г  Г Г­Г®Г­ГЁГ¬Г­Г®Г© Г±Г¬ГҐГ­ГҐ FBI", dontFriskWithoutDuty)
+				imgui.Spacing()
+				imgui.Checkbox(u8"\tГЌГҐ Г±ГЇГ°Г ГёГЁГўГ ГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Гі Г­Г®ГўГЁГ·ГЄГ®Гў 1-2 lvl", askNovices)
+				imgui.Spacing()
+				imgui.Checkbox(u8"\tГЌГҐ Г±ГЇГ°Г ГёГЁГўГ ГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Гі ГЋГЏГѓ", askGang)
+				imgui.Spacing()
+				imgui.Checkbox(u8"\tГЌГҐ Г±ГЇГ°Г ГёГЁГўГ ГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Гі ГЏГЋ", askPolice)
+				imgui.Spacing()
+				imgui.Checkbox(u8"\tГЌГҐ Г±ГЇГ°Г ГёГЁГўГ ГІГј Г¤Г®ГЄГіГ¬ГҐГ­ГІГ» Гі ГЁГЈГ°Г®ГЄГ®Гў ГЁГ§ Г±ГЇГЁГ±ГЄГ ", askPlayers)
+				imgui.Spacing()
+				imgui.Spacing()
+				imgui.Separator()
+				imgui.Spacing()
+				imgui.Text(u8"Г€ГЈГ°Г®ГЄГЁ, ГЄГ®ГІГ®Г°Г»ГҐ Г­ГҐ ГЎГіГ¤ГіГІ ГЇГ°Г®ГўГҐГ°ГїГІГјГ±Гї:")
 				imgui.Spacing()
 				imgui.PushItemWidth(len2)
 				imgui.InputTextMultiline(u8" ", ignoredPlayers)
 				imgui.PopItemWidth()
 
-				if imgui.Button(u8"\t\t\t\t\t   Сохранить   \t\t\t\t\t") then
+				if imgui.Button(u8"\t\t\t\t\t   Г‘Г®ГµГ°Г Г­ГЁГІГј   \t\t\t\t\t") then
 					ignoredArray = {}
 					if not (ignoredPlayers.v == "") and not (ignoredPlayers.v == nil) then
 						local i = 1
@@ -659,16 +659,16 @@ function askDocuments(pID)
 						end
 					end)
 				else
-					sampAddChatMessage("Игрок {ffffff}" .. sampGetPlayerNickname(playerID) .. "[" .. playerID .. "]{7129ff}" .. " имеет " .. score .. " lvl", phcolor)
+					sampAddChatMessage("Г€ГЈГ°Г®ГЄ {ffffff}" .. sampGetPlayerNickname(playerID) .. "[" .. playerID .. "]{7129ff}" .. " ГЁГ¬ГҐГҐГІ " .. score .. " lvl", phcolor)
 				end
 			else
-				sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+				sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 			end
 		else
-			sampAddChatMessage("Вы не на смене", phcolor)
+			sampAddChatMessage("Г‚Г» Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ", phcolor)
 		end
 	else
-		sampAddChatMessage("Сегодня воскресенье.", phcolor)
+		sampAddChatMessage("Г‘ГҐГЈГ®Г¤Г­Гї ГўГ®Г±ГЄГ°ГҐГ±ГҐГ­ГјГҐ.", phcolor)
 	end
 end
 
@@ -705,16 +705,16 @@ function askCarDocuments(pID)
 					sampSendChat(u8:decode(temp1))
 					sampSendChat(u8:decode(temp2))
 				else
-					sampAddChatMessage("Игрок {ffffff}" .. sampGetPlayerNickname(playerID) .. "[" .. playerID .. "]{7129ff}" .. " имеет " .. score .. " lvl", phcolor)
+					sampAddChatMessage("Г€ГЈГ°Г®ГЄ {ffffff}" .. sampGetPlayerNickname(playerID) .. "[" .. playerID .. "]{7129ff}" .. " ГЁГ¬ГҐГҐГІ " .. score .. " lvl", phcolor)
 				end
 			else
-				sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+				sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 			end
 		else
-			sampAddChatMessage("Вы не на смене", phcolor)
+			sampAddChatMessage("Г‚Г» Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ", phcolor)
 		end
 	else
-		sampAddChatMessage("Сегодня воскресенье.", phcolor)
+		sampAddChatMessage("Г‘ГҐГЈГ®Г¤Г­Гї ГўГ®Г±ГЄГ°ГҐГ±ГҐГ­ГјГҐ.", phcolor)
 	end
 end
 
@@ -758,16 +758,16 @@ function getPlayerOutOfVeh(pID)
 						end
 					end)
 				else
-					sampAddChatMessage("Игрок {ffffff}" .. sampGetPlayerNickname(playerID) .. "[" .. playerID .. "]{7129ff}" .. " имеет " .. score .. " lvl", phcolor)
+					sampAddChatMessage("Г€ГЈГ°Г®ГЄ {ffffff}" .. sampGetPlayerNickname(playerID) .. "[" .. playerID .. "]{7129ff}" .. " ГЁГ¬ГҐГҐГІ " .. score .. " lvl", phcolor)
 				end
 			else
-				sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+				sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 			end
 		else
-			sampAddChatMessage("Вы не на смене", phcolor)
+			sampAddChatMessage("Г‚Г» Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ", phcolor)
 		end
 	else
-		sampAddChatMessage("Сегодня воскресенье.", phcolor)
+		sampAddChatMessage("Г‘ГҐГЈГ®Г¤Г­Гї ГўГ®Г±ГЄГ°ГҐГ±ГҐГ­ГјГҐ.", phcolor)
 	end
 end
 
@@ -815,16 +815,16 @@ function stopPlayerVeh(pID)
 						sc = false
 					end)
 				else
-					sampAddChatMessage("Игрок {ffffff}" .. sampGetPlayerNickname(playerID) .. "[" .. playerID .. "]{7129ff}" .. " имеет " .. score .. " lvl", phcolor)
+					sampAddChatMessage("Г€ГЈГ°Г®ГЄ {ffffff}" .. sampGetPlayerNickname(playerID) .. "[" .. playerID .. "]{7129ff}" .. " ГЁГ¬ГҐГҐГІ " .. score .. " lvl", phcolor)
 				end
 			else
-				sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+				sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 			end
 		else
-			sampAddChatMessage("Вы не на смене", phcolor)
+			sampAddChatMessage("Г‚Г» Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ", phcolor)
 		end
 	else
-		sampAddChatMessage("Сегодня воскресенье.", phcolor)
+		sampAddChatMessage("Г‘ГҐГЈГ®Г¤Г­Гї ГўГ®Г±ГЄГ°ГҐГ±ГҐГ­ГјГҐ.", phcolor)
 	end
 end
 
@@ -853,13 +853,13 @@ function byePlayer(pID)
 				sampSendChat(u8:decode(temp1))
 				sampSendChat(u8:decode(temp2))
 			else
-				sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+				sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 			end
 		else
-			sampAddChatMessage("Вы не на смене", phcolor)
+			sampAddChatMessage("Г‚Г» Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ", phcolor)
 		end
 	else
-		sampAddChatMessage("Сегодня воскресенье.", phcolor)
+		sampAddChatMessage("Г‘ГҐГЈГ®Г¤Г­Гї ГўГ®Г±ГЄГ°ГҐГ±ГҐГ­ГјГҐ.", phcolor)
 	end
 end
 
@@ -878,10 +878,10 @@ function frisk(pID)
 			ped = sampGetCharHandleBySampPlayerId(playerID)
 			sampSendChat("/frisk " .. playerID)
 		else
-			sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+			sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 		end
 	else
-		sampAddChatMessage("Вы не на смене", phcolor)
+		sampAddChatMessage("Г‚Г» Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ", phcolor)
 	end
 end
 
@@ -896,7 +896,7 @@ function cuffPlayer(pID)
 		ped = sampGetCharHandleBySampPlayerId(playerID)
 		sampSendChat("/cuff " .. playerID)
 	else
-		sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+		sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 	end
 end
 
@@ -911,7 +911,7 @@ function unCuffPlayer(pID)
 		ped = sampGetCharHandleBySampPlayerId(playerID)
 		sampSendChat("/uncuff " .. playerID)
 	else
-		sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+		sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 	end
 end
 
@@ -926,7 +926,7 @@ function chasePlayer(pID)
 		ped = sampGetCharHandleBySampPlayerId(playerID)
 		sampSendChat("/z " .. playerID)
 	else
-		sampAddChatMessage('Не найдено ни одного игрока поблизости', phcolor)
+		sampAddChatMessage('ГЌГҐ Г­Г Г©Г¤ГҐГ­Г® Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  ГЇГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ', phcolor)
 	end
 end
 
@@ -960,22 +960,22 @@ function autoFind(id)
 			end
 
 			isact = true
-			sampAddChatMessage("Автоматический поиск {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]{ffffff}.", phcolor)
+			sampAddChatMessage("ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁГ© ГЇГ®ГЁГ±ГЄ {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]{ffffff}.", phcolor)
 			sampSendChat('/find ' .. suspectid)
 			thread1:run()
 		end
 	elseif id == "off" then
 		if isact then
 			isact = not isact
-			sampAddChatMessage("Остановка автопоиска {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]", phcolor)
+			sampAddChatMessage("ГЋГ±ГІГ Г­Г®ГўГЄГ  Г ГўГІГ®ГЇГ®ГЁГ±ГЄГ  {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]", phcolor)
 		else
-			sampAddChatMessage("Автоматический поиск не был активирован", phcolor)
+			sampAddChatMessage("ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁГ© ГЇГ®ГЁГ±ГЄ Г­ГҐ ГЎГ»Г« Г ГЄГІГЁГўГЁГ°Г®ГўГ Г­", phcolor)
 		end
 	else
 		if isact then
-			sampAddChatMessage("Автоматический поиск уже активирован", phcolor)
+			sampAddChatMessage("ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁГ© ГЇГ®ГЁГ±ГЄ ГіГ¦ГҐ Г ГЄГІГЁГўГЁГ°Г®ГўГ Г­", phcolor)
 		else
-			sampAddChatMessage("ID игрока указан неверно", phcolor)
+			sampAddChatMessage("ID ГЁГЈГ°Г®ГЄГ  ГіГЄГ Г§Г Г­ Г­ГҐГўГҐГ°Г­Г®", phcolor)
 		end
 	end
 end
@@ -1026,7 +1026,7 @@ end
 
 function sampev.onServerMessage(color, text)
 	if sc then
-		if text:find("Поблизости нет точек,.*") or text:find("Это транспортное средство не.*") then
+		if text:find("ГЏГ®ГЎГ«ГЁГ§Г®Г±ГІГЁ Г­ГҐГІ ГІГ®Г·ГҐГЄ,.*") or text:find("ГќГІГ® ГІГ°Г Г­Г±ГЇГ®Г°ГІГ­Г®ГҐ Г±Г°ГҐГ¤Г±ГІГўГ® Г­ГҐ.*") then
 			sampSendChat("/s " .. u8:decode(temp1))
 			sampSendChat("/s " .. u8:decode(temp2))
 
@@ -1036,9 +1036,9 @@ function sampev.onServerMessage(color, text)
 	end
 
 	if az then
-		if text:find("Люди, которые находятся в розыске:") then
+		if text:find("Г‹ГѕГ¤ГЁ, ГЄГ®ГІГ®Г°Г»ГҐ Г­Г ГµГ®Г¤ГїГІГ±Гї Гў Г°Г®Г§Г»Г±ГЄГҐ:") then
 			return false
-		elseif text:find("На данный момент никто не разыскивается.") then
+		elseif text:find("ГЌГ  Г¤Г Г­Г­Г»Г© Г¬Г®Г¬ГҐГ­ГІ Г­ГЁГЄГІГ® Г­ГҐ Г°Г Г§Г»Г±ГЄГЁГўГ ГҐГІГ±Гї.") then
 			return true
 		elseif text:find(".* .ID %d+..") and color == -169954305 then
 			for id in string.gmatch	(text, "ID %d+") do
@@ -1050,12 +1050,12 @@ function sampev.onServerMessage(color, text)
 	end
 
 	if ad then
-		if text:find("Люди, которые находятся в розыске:") then
+		if text:find("Г‹ГѕГ¤ГЁ, ГЄГ®ГІГ®Г°Г»ГҐ Г­Г ГµГ®Г¤ГїГІГ±Гї Гў Г°Г®Г§Г»Г±ГЄГҐ:") then
 			return false
-		elseif text:find("На данный момент никто не разыскивается.") then
+		elseif text:find("ГЌГ  Г¤Г Г­Г­Г»Г© Г¬Г®Г¬ГҐГ­ГІ Г­ГЁГЄГІГ® Г­ГҐ Г°Г Г§Г»Г±ГЄГЁГўГ ГҐГІГ±Гї.") then
 			return true
-		elseif text:find(".* .ID %d+.. %d+ зв {34C924}.surrender.{F5DEB3}.") then
-			for id in string.gmatch	(text, " .ID %d+.. %d+ зв {34C924}.surrender.{F5DEB3}.") do
+		elseif text:find(".* .ID %d+.. %d+ Г§Гў {34C924}.surrender.{F5DEB3}.") then
+			for id in string.gmatch	(text, " .ID %d+.. %d+ Г§Гў {34C924}.surrender.{F5DEB3}.") do
 				sampSendChat("/det " .. id:match("ID %d+"):match("%d+"))
 			end
 		else
@@ -1067,7 +1067,7 @@ function sampev.onServerMessage(color, text)
 		
 	end
 
-	if text:find("Вы выстрелили из шокера в игрока {abcdef}.+{ffffff} и обездвижили его на .*") and cuffAfterTaser.v then
+	if text:find("Г‚Г» ГўГ»Г±ГІГ°ГҐГ«ГЁГ«ГЁ ГЁГ§ ГёГ®ГЄГҐГ°Г  Гў ГЁГЈГ°Г®ГЄГ  {abcdef}.+{ffffff} ГЁ Г®ГЎГҐГ§Г¤ГўГЁГ¦ГЁГ«ГЁ ГҐГЈГ® Г­Г  .*") and cuffAfterTaser.v then
 		isPlayerFrozen = true
 
 		lua_thread.create(function()
@@ -1081,32 +1081,32 @@ function sampev.onServerMessage(color, text)
 		return true
 	end
 
-	if isPlayerFrozen and (text:find("Вы слишком далеко друг от друга.") or text:find("На сервере не найдено игроков по указанным вами параметрам.")) then 
+	if isPlayerFrozen and (text:find("Г‚Г» Г±Г«ГЁГёГЄГ®Г¬ Г¤Г Г«ГҐГЄГ® Г¤Г°ГіГЈ Г®ГІ Г¤Г°ГіГЈГ .") or text:find("ГЌГ  Г±ГҐГ°ГўГҐГ°ГҐ Г­ГҐ Г­Г Г©Г¤ГҐГ­Г® ГЁГЈГ°Г®ГЄГ®Гў ГЇГ® ГіГЄГ Г§Г Г­Г­Г»Г¬ ГўГ Г¬ГЁ ГЇГ Г°Г Г¬ГҐГІГ°Г Г¬.")) then 
 		return false
 	end
 
-	if text:find("Вы взяли в оружейной .+") and takeGuns.v then
+	if text:find("Г‚Г» ГўГ§ГїГ«ГЁ Гў Г®Г°ГіГ¦ГҐГ©Г­Г®Г© .+") and takeGuns.v then
 		iter = iter + 1
 		gun[iter] = text:match("}.+{")
 		tg = true
 
 		if gun[iter]:find("desert") then
 			gun[iter] = "deagle"
-		elseif gun[iter]:find("снайпер") then
+		elseif gun[iter]:find("Г±Г­Г Г©ГЇГҐГ°") then
 			gun[iter] = "sniper"
 		elseif gun[iter]:find("mp5") then
 			gun[iter] = "mp5"
 		elseif gun[iter]:find("m4") then
 			gun[iter] = "m4"
-		elseif gun[iter]:find("10 табельных гранат") then
+		elseif gun[iter]:find("10 ГІГ ГЎГҐГ«ГјГ­Г»Гµ ГЈГ°Г Г­Г ГІ") then
 			gun[iter] = "gren"	
-		elseif gun[iter]:find("10 табельных дымовых шашек") then
+		elseif gun[iter]:find("10 ГІГ ГЎГҐГ«ГјГ­Г»Гµ Г¤Г»Г¬Г®ГўГ»Гµ ГёГ ГёГҐГЄ") then
 			gun[iter] = "smoke"
-		elseif gun[iter]:find("дробовик") then
+		elseif gun[iter]:find("Г¤Г°Г®ГЎГ®ГўГЁГЄ") then
 			gun[iter] = "shot"
-		elseif gun[iter]:find("винтовку") then
+		elseif gun[iter]:find("ГўГЁГ­ГІГ®ГўГЄГі") then
 			gun[iter] = "rifle"
-		elseif gun[iter]:find("обрез") then
+		elseif gun[iter]:find("Г®ГЎГ°ГҐГ§") then
 			gun[iter] = "sawn"
 		end
 
@@ -1116,40 +1116,40 @@ function sampev.onServerMessage(color, text)
 	end
 
 	if isact then
-		if text:find('Объект .* обнаружен.') then
+		if text:find('ГЋГЎГєГҐГЄГІ .* Г®ГЎГ­Г Г°ГіГ¦ГҐГ­.') then
 			pos = 0
 		end
-		if text:find('Сигнал от указанного игрока слишком слаб.') then
-			sampAddChatMessage("Остановка автопоиска {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]" .. col .. ". Объект спрятался в здании.", phcolor)
+		if text:find('Г‘ГЁГЈГ­Г Г« Г®ГІ ГіГЄГ Г§Г Г­Г­Г®ГЈГ® ГЁГЈГ°Г®ГЄГ  Г±Г«ГЁГёГЄГ®Г¬ Г±Г«Г ГЎ.') then
+			sampAddChatMessage("ГЋГ±ГІГ Г­Г®ГўГЄГ  Г ГўГІГ®ГЇГ®ГЁГ±ГЄГ  {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]" .. col .. ". ГЋГЎГєГҐГЄГІ Г±ГЇГ°ГїГІГ Г«Г±Гї Гў Г§Г¤Г Г­ГЁГЁ.", phcolor)
 			isact = not isact
 			return false
 		end
-		if text:find('Указанный вами игрок не залогинен.') then
-			sampAddChatMessage("Остановка автопоиска {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]" .. col .. ".", phcolor)
+		if text:find('Г“ГЄГ Г§Г Г­Г­Г»Г© ГўГ Г¬ГЁ ГЁГЈГ°Г®ГЄ Г­ГҐ Г§Г Г«Г®ГЈГЁГ­ГҐГ­.') then
+			sampAddChatMessage("ГЋГ±ГІГ Г­Г®ГўГЄГ  Г ГўГІГ®ГЇГ®ГЁГ±ГЄГ  {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]" .. col .. ".", phcolor)
 			isact = not isact
 		end
-		if text:find('Указанный вами игрок не заспавнен.') then
+		if text:find('Г“ГЄГ Г§Г Г­Г­Г»Г© ГўГ Г¬ГЁ ГЁГЈГ°Г®ГЄ Г­ГҐ Г§Г Г±ГЇГ ГўГ­ГҐГ­.') then
 			isact = not isact
 		end
-		if text:find('Вы не можете найти самого себя.') then
+		if text:find('Г‚Г» Г­ГҐ Г¬Г®Г¦ГҐГІГҐ Г­Г Г©ГІГЁ Г±Г Г¬Г®ГЈГ® Г±ГҐГЎГї.') then
 			isact = not isact
 		end
-		if text:find('На сервере не найдено игроков по указанным вами.*') then
+		if text:find('ГЌГ  Г±ГҐГ°ГўГҐГ°ГҐ Г­ГҐ Г­Г Г©Г¤ГҐГ­Г® ГЁГЈГ°Г®ГЄГ®Гў ГЇГ® ГіГЄГ Г§Г Г­Г­Г»Г¬ ГўГ Г¬ГЁ.*') then
 			isact = not isact
 		end
-		if text:find('Указанный вами игрок является ботом.') then
-			sampAddChatMessage("Остановка автопоиска {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]" .. col .. ". Указанный вами игрок является ботом.", phcolor)
-			isact = not isact
-			return false
-		end
-		if text:find('Вы находитесь в помещении и не сможете принимать сигналы со спутника') then
-			sampAddChatMessage("Остановка автопоиска {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]" .. col .. ". Вы находитесь в помещении.", phcolor)
+		if text:find('Г“ГЄГ Г§Г Г­Г­Г»Г© ГўГ Г¬ГЁ ГЁГЈГ°Г®ГЄ ГїГўГ«ГїГҐГІГ±Гї ГЎГ®ГІГ®Г¬.') then
+			sampAddChatMessage("ГЋГ±ГІГ Г­Г®ГўГЄГ  Г ГўГІГ®ГЇГ®ГЁГ±ГЄГ  {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]" .. col .. ". Г“ГЄГ Г§Г Г­Г­Г»Г© ГўГ Г¬ГЁ ГЁГЈГ°Г®ГЄ ГїГўГ«ГїГҐГІГ±Гї ГЎГ®ГІГ®Г¬.", phcolor)
 			isact = not isact
 			return false
 		end
-		if text:find("Запрещается запрашивать подобную информацию слишком часто. Подождите еще {fbec5d}%d сек{ffffff}.") then
+		if text:find('Г‚Г» Г­Г ГµГ®Г¤ГЁГІГҐГ±Гј Гў ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГЁ ГЁ Г­ГҐ Г±Г¬Г®Г¦ГҐГІГҐ ГЇГ°ГЁГ­ГЁГ¬Г ГІГј Г±ГЁГЈГ­Г Г«Г» Г±Г® Г±ГЇГіГІГ­ГЁГЄГ ') then
+			sampAddChatMessage("ГЋГ±ГІГ Г­Г®ГўГЄГ  Г ГўГІГ®ГЇГ®ГЁГ±ГЄГ  {ffffff}"..sampGetPlayerNickname(suspectid).."["..suspectid.."]" .. col .. ". Г‚Г» Г­Г ГµГ®Г¤ГЁГІГҐГ±Гј Гў ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГЁ.", phcolor)
+			isact = not isact
+			return false
+		end
+		if text:find("Г‡Г ГЇГ°ГҐГ№Г ГҐГІГ±Гї Г§Г ГЇГ°Г ГёГЁГўГ ГІГј ГЇГ®Г¤Г®ГЎГ­ГіГѕ ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГѕ Г±Г«ГЁГёГЄГ®Г¬ Г·Г Г±ГІГ®. ГЏГ®Г¤Г®Г¦Г¤ГЁГІГҐ ГҐГ№ГҐ {fbec5d}%d Г±ГҐГЄ{ffffff}.") then
 			thread1:terminate()
-			wtime = tonumber(text:match("%d сек"):match("%d"))
+			wtime = tonumber(text:match("%d Г±ГҐГЄ"):match("%d"))
 
 			lua_thread.create(function()
 				wait(wtime + 500)
@@ -1162,15 +1162,15 @@ function sampev.onServerMessage(color, text)
 	end
 
 	if takeGuns.v then
-		if text:find("Агент .* взял удостоверение и вышел на службу.") then
+		if text:find("ГЂГЈГҐГ­ГІ .* ГўГ§ГїГ« ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГҐГ­ГЁГҐ ГЁ ГўГ»ГёГҐГ« Г­Г  Г±Г«ГіГ¦ГЎГі.") then
 			sampSendChat("/take knife")
 			return true
 		end
 	end
 
 	if accessory then
-		if text:find("^В вашем инвентаре нет аксессуаров для нижней части лица, совместимых с этим скином.") or text:find("В вашем инвентаре нет шлемов, защищающих голову, совместимых с этим скином.") or
-				text:find("В вашем инвентаре нет аксессуаров для глаз, совместимых с этим скином.") then
+		if text:find("^Г‚ ГўГ ГёГҐГ¬ ГЁГ­ГўГҐГ­ГІГ Г°ГҐ Г­ГҐГІ Г ГЄГ±ГҐГ±Г±ГіГ Г°Г®Гў Г¤Г«Гї Г­ГЁГ¦Г­ГҐГ© Г·Г Г±ГІГЁ Г«ГЁГ¶Г , Г±Г®ГўГ¬ГҐГ±ГІГЁГ¬Г»Гµ Г± ГЅГІГЁГ¬ Г±ГЄГЁГ­Г®Г¬.") or text:find("Г‚ ГўГ ГёГҐГ¬ ГЁГ­ГўГҐГ­ГІГ Г°ГҐ Г­ГҐГІ ГёГ«ГҐГ¬Г®Гў, Г§Г Г№ГЁГ№Г ГѕГ№ГЁГµ ГЈГ®Г«Г®ГўГі, Г±Г®ГўГ¬ГҐГ±ГІГЁГ¬Г»Гµ Г± ГЅГІГЁГ¬ Г±ГЄГЁГ­Г®Г¬.") or
+				text:find("Г‚ ГўГ ГёГҐГ¬ ГЁГ­ГўГҐГ­ГІГ Г°ГҐ Г­ГҐГІ Г ГЄГ±ГҐГ±Г±ГіГ Г°Г®Гў Г¤Г«Гї ГЈГ«Г Г§, Г±Г®ГўГ¬ГҐГ±ГІГЁГ¬Г»Гµ Г± ГЅГІГЁГ¬ Г±ГЄГЁГ­Г®Г¬.") then
 			return false
 		end
 	end
@@ -1182,20 +1182,20 @@ function sampev.onSendCommand(command)
 		local myColor = sampGetPlayerColor(myId)
 
 		if dontFriskWithoutDuty.v and (myColor == 4294967295 or myColor == -1) then
-			sampAddChatMessage("Вы пытаетесь обыскать будучи не на смене.", phcolor)
+			sampAddChatMessage("Г‚Г» ГЇГ»ГІГ ГҐГІГҐГ±Гј Г®ГЎГ»Г±ГЄГ ГІГј ГЎГіГ¤ГіГ·ГЁ Г­ГҐ Г­Г  Г±Г¬ГҐГ­ГҐ.", phcolor)
 			return false
 		end
 	end
 end
 
 function sampev.onShowDialog(dialogId, style, title, button1, button, text) 
-	if accessory and dialogId == 45 and sampGetDialogText():find("Вы не можете использовать этот аксессуар при низком уровне гигиены") then 
+	if accessory and dialogId == 45 and sampGetDialogText():find("Г‚Г» Г­ГҐ Г¬Г®Г¦ГҐГІГҐ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј ГЅГІГ®ГІ Г ГЄГ±ГҐГ±Г±ГіГ Г° ГЇГ°ГЁ Г­ГЁГ§ГЄГ®Г¬ ГіГ°Г®ГўГ­ГҐ ГЈГЁГЈГЁГҐГ­Г»") then 
 		sampCloseCurrentDialogWithButton(0)
 		return true
 	end 
 
-	if (dialogId == 999 or dialogId == 45) and sampGetDialogText():find("Вы не можете использовать это оружие в интерьере") then 
-		sampAddChatMessage("Вы не можете использовать это оружие в интерьере.", phcolor)
+	if (dialogId == 999 or dialogId == 45) and sampGetDialogText():find("Г‚Г» Г­ГҐ Г¬Г®Г¦ГҐГІГҐ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј ГЅГІГ® Г®Г°ГіГ¦ГЁГҐ Гў ГЁГ­ГІГҐГ°ГјГҐГ°ГҐ") then 
+		sampAddChatMessage("Г‚Г» Г­ГҐ Г¬Г®Г¦ГҐГІГҐ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј ГЅГІГ® Г®Г°ГіГ¦ГЁГҐ Гў ГЁГ­ГІГҐГ°ГјГҐГ°ГҐ.", phcolor)
 		setVirtualKeyDown(VK_RETURN, true)
 		setVirtualKeyDown(VK_RETURN, false)
 		return false
@@ -1268,16 +1268,16 @@ function autoupdate(json_url)
 							lua_thread.create(function()
 								local dlstatus = require('moonloader').download_status
 								local color = -1
-								sampAddChatMessage(('Обнаружено обновление. Пытаюсь обновиться c '..thisScript().version..' на '..updateversion), color)
+								sampAddChatMessage(('ГЋГЎГ­Г Г°ГіГ¦ГҐГ­Г® Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ. ГЏГ»ГІГ ГѕГ±Гј Г®ГЎГ­Г®ГўГЁГІГјГ±Гї c '..thisScript().version..' Г­Г  '..updateversion), color)
 								wait(250)
 
 								downloadUrlToFile(updatelink, thisScript().path,
 									function(id3, status1, p13, p23)
 										if status1 == dlstatus.STATUS_DOWNLOADINGDATA then
-											print(string.format('Загружено %d из %d.', p13, p23))
+											print(string.format('Г‡Г ГЈГ°ГіГ¦ГҐГ­Г® %d ГЁГ§ %d.', p13, p23))
 										elseif status1 == dlstatus.STATUS_ENDDOWNLOADDATA then
-											print('Загрузка обновления завершена.')
-											sampAddChatMessage(('Обновление завершено!'), color)
+											print('Г‡Г ГЈГ°ГіГ§ГЄГ  Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГї Г§Г ГўГҐГ°ГёГҐГ­Г .')
+											sampAddChatMessage(('ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г§Г ГўГҐГ°ГёГҐГ­Г®!'), color)
 											goupdatestatus = true
 											
 											lua_thread.create(function() 
@@ -1287,7 +1287,7 @@ function autoupdate(json_url)
 										end
 										if status1 == dlstatus.STATUSEX_ENDDOWNLOAD then
 											if goupdatestatus == nil then
-												sampAddChatMessage(('Обновление прошло неудачно. Запускаю устаревшую версию..'), color)
+												sampAddChatMessage(('ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ ГЇГ°Г®ГёГ«Г® Г­ГҐГіГ¤Г Г·Г­Г®. Г‡Г ГЇГіГ±ГЄГ Гѕ ГіГ±ГІГ Г°ГҐГўГёГіГѕ ГўГҐГ°Г±ГЁГѕ..'), color)
 												update = false
 											end
 										end
@@ -1296,11 +1296,11 @@ function autoupdate(json_url)
 							end)
 						else
 							update = false
-							print('v'..thisScript().version..': Обновление не требуется.')
+							print('v'..thisScript().version..': ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г­ГҐ ГІГ°ГҐГЎГіГҐГІГ±Гї.')
 						end
 					end
         		else
-					print('v'..thisScript().version..': Не могу проверить обновление')
+					print('v'..thisScript().version..': ГЌГҐ Г¬Г®ГЈГі ГЇГ°Г®ГўГҐГ°ГЁГІГј Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ')
 					update = false
         		end
       		end
