@@ -1,5 +1,5 @@
 script_name('PoliceHelper')
-script_version("1.2.0")
+script_version("1.2.1")
 
 local sampev = require 'lib.samp.events'
 local keys = require 'vkeys'
