@@ -1,1 +1,1 @@
-{ff8e00}Answerer{ffffff} обновлен. Добавлено ответов: {ff8e00}17{ffffff}. Исправлено: {ff8e00}30{ffffff}.
+{ff8e00}Answerer{ffffff} обновлен. Исправлено ответов: {ff8e00}5{ffffff}. Ведётся большая обнова, готово на {ff8e00}40%{ffffff}.
