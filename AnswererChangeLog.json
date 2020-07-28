@@ -1,7 +1,7 @@
 {
   "text1": {
-    "text": "{ff8e00}Answerer{ffffff} обновлен. Добавлено ответов: {ff8e00}1{ffffff}. Исправлено {ff8e00}4{ffffff}.",
-    "show": "0"
+    "text": "{ff8e00}Answerer{ffffff} обновлен. Добавлено ответов: {ff8e00}20{ffffff}. Исправлено {ff8e00}21{ffffff}.",
+    "show": "1"
   },
   "text2": {
     "text": "Добавлена возможность отключить отображение вопроса на который отвечает скрипт {ff8e00}/showquestion{ffffff}.",
