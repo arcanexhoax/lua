@@ -1,10 +1,10 @@
 {
   "text1": {
-    "text": "{ff8e00}Answerer{ffffff} обновлен. Добавлено ответов: {ff8e00}10{ffffff}. Исправлено: {ff8e00}6{ffffff}.",
-    "show": "0"
+    "text": "{ff8e00}Answerer{ffffff} обновлен. Добавлено ответов: {ff8e00}9{ffffff}. Исправлено: {ff8e00}19{ffffff}.",
+    "show": "1"
   },
   "text2": {
     "text": "Доработано меню: {ff8e00}/anmenu{ffffff}.",
-    "show": "1"
+    "show": "0"
   }
 }
